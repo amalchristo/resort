@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+body , html{
+    overflow-x: hidden;
+}
+#single-room{
+    height: 11em;
+    padding-left: 1em;
+    width: 16em;
+}
+.card-room{
+    position: absolute; 
+    top: 3em; 
+    left: 46em;
+}
+.map-area{
+    width:60em; 
+    height:35em;
+}
+#register_button{
+    margin-top: -0.5em;
+}
+.near{
+    height: 22em;
+    margin-bottom: 2em;
+    width: 40em;
+}

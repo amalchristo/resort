@@ -1,0 +1,49 @@
+{% extends 'admin_template/admin_master.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card m-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Add room</h5>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" name="room_name">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example" name="room_capacity">
+                                <option selected>Room capacity</option>
+                                <option value="1">Adult 1</option>
+                                <option value="2">Adult 2</option>
+                                <option value="3">Adult 3</option>
+                              </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Photo</label>
+                            <input type="file" class="form-control" name="room_photo">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Price</label>
+                            <input type="number" class="form-control" name="room_price">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Description</label>
+                            <input type="text" class="form-control" name="room_description">
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'admin_template/admin_master.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card m-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Add Staff</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Last name</label>
+                            <input type="text" class="form-control">
+                        </div><div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control">
+                        </div>                       
+                        <div class="mb-3">
+                            <label class="form-label">aadhaar card number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Qualification</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Age</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Photo</label>
+                            <input type="file" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Staff Id</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+{% endblock  %}

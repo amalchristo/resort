@@ -1,0 +1,35 @@
+{% extends 'admin_template/admin_master.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <table class="table border-primary">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">capacity</th>
+                <th scope="col">photo</th>
+                <th scope="col">price</th>
+                <!-- <th scope="col">description</th> -->
+                <th scope="col">remove</th>
+              </tr>
+            </thead>
+            {% for rooms in room %}
+            <tbody>
+                <td>{{ rooms.id }}</td>
+                <td>{{ rooms.room_name }}</td>
+                <td>{{ rooms.room_capacity }}</td>
+                <td>{{ rooms.room_photo }}</td>
+                <td>{{ rooms.room_price }}</td>
+                <td>{{ rooms.room_description }}</td>
+                <td>
+                    <a href="{% url 'resort_admin:delete_room' rooms.id %}"><button type="button" class="btn btn-primary">Delete</button></a>
+                </td>
+            </tbody>
+            {% endfor %}
+              
+    </div>
+</div>
+
+{% endblock  %}
